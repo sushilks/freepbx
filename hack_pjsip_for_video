@@ -1,0 +1,3 @@
+Change the following in the running container to allow video call for pjsip
+vi /var/www/html/admin/modules/core/functions.inc/drivers/PJSip.class.php
+ 874                 $endpoint[] = "allow=".str_replace('&', ',', $config['allow']) . ",h264,mpeg4444"; // & is invalid in pjsip, but valid in chan_sip

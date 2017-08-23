@@ -1,0 +1,5 @@
+docker build --build-arg FREEPBX_DB_USER=sip --build-arg FREEPBX_DB_PW=ChangeME --build-arg MYSQL_ROOT_PW=ChangeMe . -t sushilks/freepbx
+./run_freeppbx
+# try the following if manually chaning the container and need to recommit.
+#docker exec -ti freepbx /bin/bash -c "cd /usr/src/freepbx &&  ./install --dbuser=\"sip\" --dbpass=\"ChangeMe\" -n"
+#docker commit `docker inspect --format="{{.Id}}" freepbx` sushilks/freepbx-0
